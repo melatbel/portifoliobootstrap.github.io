@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&family=Quicksand&display=swap');
+:root{
+    --primary:#ff2e85 !important ;
+    --secondary:#ff75ef !important;
+    --grey:#e4e3e3 !important;
+    --dark:#343a40 !important;
+    --txt:'Quicksand',sans-serif;
+    --logo:'Pacifico',sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+
+}
+body{
+    position: relative;
+    padding-top: 100px;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px var(--grey);
+    box-sizing: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-image: linear-gradient(var(--primary), var(--secondary));
+    border-radius: 10px;
+}
+.navbar{
+    box-shadow: 1px 1px 5px var(--grey);
+    
+}
+.logo,.logo:hover{
+    font-size: 30px !important;
+    font-family: var(--logo);
+    color: var(--primary);
+}
+.nav-link{
+    color: var(--dark);
+}
+.nav-link:hover{
+    color: var(--secondary);
+}
+.navbar-toggler{
+    border: none !important;
+    outline: none !important;
+    font-size: 30px !important;
+}
+
+.theme-text{
+   color: var(--primary); 
+}
+
+#person-img{
+    background-image: url(mel.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 408px;
+    background-position-x:50% ;
+}
+#person-img::after{
+content:'';
+position:absolute;
+width:70%;
+height:90%;
+background-color: var(--primary);
+border-radius:30% 70% 70% 30%/30% 40% 60% 70%;
+z-index:-1;
+transform: translateX(17%);
+}
+.title{
+    text-align: center;
+}
+.title h1{
+    font-family: var(--logo);
+    letter-spacing: 3px;
+    text-transform: capitalize;
+}
+p{
+    font-size: 20px;
+}
+@keyframes slideLeft {
+    0%{
+     opacity: 0;
+     transform: translateX(100px);
+    } 
+    100%{
+     opacity: 1;
+     transform: translateY(0);
+    }
+ }
+ @keyframes slideBottom {
+    0%{
+     opacity: 0;
+     transform: translateX(-100px);
+    } 
+    100%{
+     opacity: 1;
+     transform: translateY(0);
+    }
+ }
+ @keyframes zoomIn {
+    0%{
+     opacity: 0;
+     transform: scale(0);
+    } 
+    100%{
+     opacity: 1;
+     transform: scale(1);
+    }
+ }
+ @keyframes floatImage {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-24px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+ }
+
+ @keyframes circleRotate {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+ }
